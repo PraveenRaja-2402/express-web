@@ -1,13 +1,9 @@
+const request = require('request')
 
-console.log("starting")
+const url = 'https://api.weatherstack.com/current?access_key=baef527d6b65da73dbaa7c9f50243cae&query=11.6643,78.1460&units=f';
 
-setTimeout(() =>{
-    console.log("after four secs")
-},2000) //here the 4000 is 4 seconds
-
-
-setTimeout(() => {
-    console.log("after 0 sec")
-},0)
-
-console.log("stopping")
+request({url :url, json:true}, (error,response) => {
+   
+// console.log(response.body.current)
+console.log(response.body.current.weather_summary[0] +"Its is currently" +response.body.current.weather_descriptions[0] )
+})
