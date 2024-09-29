@@ -1,4 +1,6 @@
 const request = require("request");
+const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
 
 // const url =
 //   "https://api.weatherstack.com/current?access_key=baef527d6b65da73dbaa7c9f50243cae&query=11.6643,78.1460&units=m";
@@ -14,7 +16,8 @@ const request = require("request");
 //         "Its is currently " +
 //         response.body.current.temperature +
 //         " degrees out.Its feels like " +
-//         response.body.current.feelslike
+//         response.body.current.feelslike. + "there is a " + response.body.currently.precipProbability + "% chance of rain"
+        
 //     );
 //   }
 // });
@@ -25,10 +28,10 @@ const request = require("request");
 // request({ url: geocodeUrl, json: true }, (error, response) => {
 //   if (error) {
 //     console.log("unable to connect the geocodeing !");
-//   } 
+//   }
 //   else if (response.body.features === 0) {
 //     console.log("Unable to find the latitude and longitude !");
-//   } 
+//   }
 //   else {
 //     const latitude = response.body.features[0].properties.coordinates.longitude;
 //     const longitude = response.body.features[0].properties.coordinates.latitude;
@@ -36,13 +39,23 @@ const request = require("request");
 //   }
 // });
 
+// geocode('chennai', (error, data) => {
+//     console.log("error", error);
+//     console.log("data", data);
+//   });
 
-// const geocode = (address,callback) => {
-//   const url = 'https://api.mapbox.com/search/geocode/v6/mapbox.place/0&'+encodeURIComponent(address) +'access_token=pk.eyJ1IjoiamFnYWRlc2gwNyIsImEiOiJjbTB1dHkwZ3EwYjF5MmxzZTE5eDFveHN4In0.W9A7svv6ozS8Mlxr18l40w&limit=1'
-// }
+forecast(-75.7088,44.1545, (error,data) =>{
+console.log('error', error)
+console.log('data', data)
+})
 
-const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + 
-'.json?access_token=pk.eyJ1IjoiamFnYWRlc2gwNyIsImEiOiJjbTB1dHkwZ3EwYjF5MmxzZTE5eDFveHN4In0.W9A7svv6ozS8Mlxr18l40w&limit=1';
+
+
+
+
+
+
+
 
 
 
