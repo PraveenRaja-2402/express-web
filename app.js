@@ -1,14 +1,14 @@
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
-geocode("chennai", (error, data) => {
+geocode('chennai', (error, data) => {
   if (error) {
-    return console.log(error);
+    return console.log(error)
   }
 
-  forecast(data.longitude, data.latitude, (error, forecastData) => {
+  forecast(data.latitude,data.longitude, (error, forecastData) => {
     if (error) {
-      return console.log(error);
+      return console.log(error)
     }
     console.log(data.location)
     console.log(forecastData)
