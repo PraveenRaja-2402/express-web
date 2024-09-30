@@ -15,8 +15,8 @@ const forecast = (latitude, longitude, callback) => {
       callback("unable to find the location");
     } else {
       console.log(
-        undefined,
-        response.body.observation_time +
+
+          " Its clear throughout the day " +
           "Its is currently " +
           response.body.current.temperature +
           " There is a " +
