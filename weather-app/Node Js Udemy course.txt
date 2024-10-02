@@ -1,0 +1,44 @@
+what did you learn fron node js udemy course ?
+===============================================
+
+these things are :
+----------------
+
+1.chalk
+2.Yargs
+3.nodemon
+4.argv
+5.validator
+6.require,export
+7.parse
+8.ToString
+9.stringify
+10.arrow function and callback
+11.write,read,list,update,load,remove title the Json file
+12.try catch
+13.filter() methode
+14.find() methode
+
+
+
+25/09/24
+------------
+15.debugging node.js 
+{
+node inspect app.js add --title="course" --body="Node.js"  ----> this is old version of the command
+node --inspect-brk app.js add --title="course" --body="Node.js"   -----> this is new version of command 
+run this in chrome -----> chrome://inspect
+}
+
+16.Error message in node.js 
+17.Asynchronous basics
+18.call stack,call back queue and event loop
+
+25/09/24
+-------------
+19.website name waetherstack.com
+   =>after signup use this and hit on browser ----> https://api.weatherstack.com/current?access_key=baef527d6b65da73dbaa7c9f50243cae&query=44.942,123.0351
+   =>then we get the request JSON query
+    
+
+

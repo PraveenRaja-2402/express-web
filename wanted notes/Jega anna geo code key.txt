@@ -1,0 +1,4 @@
+3df207d375d5236f15f290a973c6c6ee
+
+
+https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric
